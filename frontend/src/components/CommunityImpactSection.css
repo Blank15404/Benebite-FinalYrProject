@@ -1,0 +1,127 @@
+/* Community Impact Section */
+.community-section {
+    background-color: white;
+    padding: 30px 20px; /* Increased padding */
+    border-radius: 15px;
+  }
+  
+  .community-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .community-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #5c2018;
+    font-weight: 700;
+  }
+  
+  .community-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 60px; /* Increased margin */
+  }
+  
+  .impact-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .stat {
+    text-align: center;
+    background-color: #f3e0dc; /* Light background for each stat */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .stat-text h3 {
+    margin: -110px;
+  }
+  .stat-text p {
+    margin: -10px;
+  }
+
+  .stat:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .radial-bar {
+    position: relative;
+    width: 160px; /* Increased size */
+    height: 200px; /* Increased size */
+  }
+  
+  .radial-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-337deg);
+  }
+  
+  .radial-svg circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform-origin: center;
+  }
+  
+  .track {
+    stroke: #cfbdb9; /* Transparent tracker */
+  }
+  
+  .progress {
+    stroke: #bc4639; /* Shaded navigator */
+    stroke-dasharray: 314; /* Circumference of the circle (2 * π * r = 2 * 3.14 * 50) */
+    stroke-dashoffset: 314; /* Initial offset to hide the progress */
+    transition: stroke-dashoffset 0.5s ease;
+  }
+  
+  .radial-bar:hover .progress {
+    stroke-dashoffset: calc(314 - (314 * var(--percentage)) / 100); /* Animate on hover */
+  }
+  
+  .stat-text {
+    margin-top: 20px;
+  }
+  
+  .stat-text h3 {
+    font-size: 2.5rem;
+    color: #5c2018;
+    margin-bottom: 10px;
+  }
+  
+  .stat-text p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .impact-stats {
+      gap: 30px;
+    }
+  
+    .stat {
+      padding: 20px;
+    }
+  
+    .radial-bar {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .stat-text h3 {
+      font-size: 2rem;
+    }
+  
+    .stat-text p {
+      font-size: 1rem;
+    }
+  }

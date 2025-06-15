@@ -1,0 +1,346 @@
+/* Hero Section */
+.hero-section1 {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5c2018; /* Fallback color */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/aboutus.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 0 5px;
+  }
+  
+  .hero-content1 {
+    opacity: 1; /* Start with visible content */
+    transform: translateY(0); /* No initial offset */
+    animation: fadeIn 1.5s ease-in-out; /* Apply fade-in animation */
+  }
+  
+  .hero-content1 h1 {
+    font-size: 4rem;
+    margin-top: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content1 p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Optional: Add a slight upward movement */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Section Styles */
+  .section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 30px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    max-width: 1200px;
+    margin:auto;
+  }
+  
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Our Story Section */
+  .story-section {
+    background-color: white;
+    border-radius: 15px;
+  }
+  
+  .story-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .story-content {
+    flex: 1;
+  }
+  
+  .story-content h2 {
+    font-size: 3rem;
+    margin-top: 10;
+    color: #5c2018;
+    font-weight: 700;
+  }
+  
+  .story-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .story-image {
+    flex: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .story-image img {
+    width: 100%;
+    display: block;
+  }
+  
+/* Our Values Section */
+.values-section {
+    background-color: #f3e0dc;
+    padding: 0 10px;
+  }
+  
+  .values-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .values-container h2 {
+    font-size: 3rem;
+    color: #5c2018;
+    font-weight: 700;
+  }
+  
+  .values-container .subheading {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 60px;
+  }
+  
+  .values-collage {
+    position: relative;
+    height: 1500px; /* Increased height to accommodate more cards */
+    width: 100%;
+  }
+  
+  /* Content Cards */
+  .value-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    z-index: 1; /* Ensure content cards are above image cards */
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .value-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #5c2018;
+    font-weight: 600;
+  }
+  
+  .value-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Image Cards */
+  .value-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    z-index: 0; /* Ensure image cards are below content cards */
+  }
+  
+  .value-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .value-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Positioning the Cards */
+  .compassion {
+    top: 50px;
+    left: 0;
+    width: 300px;
+    height: 250px;
+  }
+  
+  .sustainability {
+    top: 150px;
+    right: -150px;
+    width: 350px;
+    height: 200px;
+  }
+  
+  .community {
+    bottom: 200px;
+    left: 100px;
+    width: 250px;
+    height: 300px;
+  }
+  
+  .innovation {
+    top: 500px;
+    left: 50px;
+    width: 300px;
+    height: 250px;
+  }
+  
+  .transparency {
+    top: 950px;
+    right: -150px;
+    width: 350px;
+    height: 200px;
+  }
+  
+  .empowerment {
+    top: 500px;
+    right: -50px;
+    width: 250px;
+    height: 300px;
+  }
+  
+  .compassion-image {
+    bottom: 100px;
+    right: 180px;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .sustainability-image {
+    top: -10px;
+    right: 200px;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .community-image {
+    top: 300px;
+    left: -140px;
+    width: 350px;
+    height: 250px;
+  }
+  
+  .innovation-image {
+    top: 350px;
+    right: 170px;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .transparency-image {
+    top: 800px;
+    right: 150px;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .empowerment-image {
+    bottom: 500px;
+    left: -150px;
+    width: 350px;
+    height: 250px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .values-collage {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .value-card,
+    .value-image {
+      position: static;
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Call to Action Section */
+  .cta-section {
+    width: auto;
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #bc4639, #5c2018);
+    color: white;
+    text-align: center;
+  }
+  
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cta-section h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  
+  .cta-section p {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .cta-button {
+    background-color: white;
+    color: #5c2018;
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #5c2018;
+    color: white;
+    transform: translateY(-5px);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #5c2018;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
